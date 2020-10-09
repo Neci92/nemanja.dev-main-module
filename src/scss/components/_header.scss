@@ -2,7 +2,7 @@
     position: relative;
     display: flex;
     justify-content: space-between;
-    padding: 1.5rem 4rem;
+    padding: 1.5rem 5rem;
 
     box-shadow: $shadow;
     border-radius: 0px 0px $radius $radius;
@@ -19,9 +19,6 @@
 
     &__logo-text {
         font-family: 'Racing Sans One', cursive;
-        background: $gradient;
-        -webkit-text-fill-color: transparent;
-        -webkit-background-clip: text;
         letter-spacing: 0.035rem;
         padding: 0 1rem;
         transition: .3s;
@@ -30,5 +27,7 @@
         left: 50%;
         transform: translate(-50%, -50%);
         font-size: 4rem;
+
+        @include gradient-text();
     }
 }

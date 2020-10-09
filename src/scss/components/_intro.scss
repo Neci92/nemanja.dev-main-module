@@ -1,0 +1,26 @@
+.intro {
+    margin-top: 5rem;
+    
+    &__wrapper {
+        display: flex;
+        padding: 5rem;
+
+        @include border();
+    }
+
+    &__image {
+        flex: 0 0 22rem;
+        border-radius: $radius;
+        overflow: hidden;
+        box-shadow: $shadow;
+        border: 0.2rem solid $bg-main;
+    }
+
+    &__header {
+        margin-bottom: 3.5rem;
+    }
+
+    &__text {
+        max-width: 70rem;
+    }
+}

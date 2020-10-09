@@ -1,0 +1,8 @@
+.h1 {
+    font-weight: 600;
+    font-size: 40px;
+    color: linear-gradient(90.86deg, #E85D54 0%, #DA3F5B 99.85%);
+    line-height: 1.2;
+
+    @include gradient-text();
+}

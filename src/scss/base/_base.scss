@@ -5,4 +5,19 @@ html {
 body {
     background-color: $bg-main;
     color: $font-main;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.8rem;
+    line-height: 1.4;
+}
+
+img {
+    width: 100%;
+}
+
+::-moz-selection,
+::selection {
+    color: white;
+    background: #E85D54;
+    -webkit-text-fill-color: initial;
+    -webkit-background-clip: initial;
 }

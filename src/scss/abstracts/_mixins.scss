@@ -38,3 +38,14 @@ $breakpoints: (
     margin-left: $container-padding-mob * -1;
   }
 }
+
+@mixin gradient-text() {
+  background: $gradient;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+
+@mixin border() {
+  box-shadow: $shadow;
+  border-radius: $radius;
+}
