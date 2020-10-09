@@ -1,0 +1,17 @@
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 $container-padding;
+
+  @include breakpoint(sm) {
+    padding: 0 20px;
+  }
+
+  &--narrow {
+    max-width: 1000px;
+  }
+}
+
+.noscroll {
+  overflow: hidden;
+}
