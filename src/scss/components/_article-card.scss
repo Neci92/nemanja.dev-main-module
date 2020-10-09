@@ -1,5 +1,6 @@
 .article-card {
     padding: $spacing;
+    padding-right: $spacing * 3;
     position: relative;
 
     @include border();
