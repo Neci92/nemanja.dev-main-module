@@ -5,4 +5,37 @@
         box-shadow: $shadow;
         display: block;
     }
+
+    &--primary {
+        padding: 1rem 5rem;
+        color: inherit;
+        position: relative;
+        overflow: hidden;
+        @include border();
+
+        &:after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            border: 1px solid red;
+            background-image: url('../images/read-more.svg'), $gradient ;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            z-index: -1;
+            z-index: 2;
+            transition: 0.2s;
+            opacity: 0;
+        }
+
+        &:hover {
+            &:after {
+                opacity: 1;
+                z-index: 2;
+            }
+        }
+    }
 }

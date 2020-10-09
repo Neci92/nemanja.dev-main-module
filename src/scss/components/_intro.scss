@@ -1,9 +1,9 @@
 .intro {
-    margin-top: 5rem;
+    margin-top: $spacing;
     
     &__wrapper {
         display: flex;
-        padding: 5rem;
+        padding: $spacing;
 
         @include border();
     }

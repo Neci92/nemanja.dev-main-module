@@ -1,0 +1,15 @@
+.footer {
+    margin-top: $spacing;
+
+    &__wrapper {
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        justify-content: space-between;
+        padding: 2rem $spacing;
+
+        @include border();
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+}

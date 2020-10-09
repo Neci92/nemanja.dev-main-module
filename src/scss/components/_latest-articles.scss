@@ -1,0 +1,13 @@
+.latest-articles {
+    margin-top: $spacing;
+
+    &__wrapper {
+        padding: $spacing;
+
+        @include border();
+    }
+
+    &__title {
+        margin-bottom: $spacing;
+    }
+}

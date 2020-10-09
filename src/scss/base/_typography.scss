@@ -6,3 +6,23 @@
 
     @include gradient-text();
 }
+
+.h2 {
+    font-size: 36px;
+    font-weight: 600;
+
+    @include gradient-text();
+}
+
+.h3 {
+    font-size: 30px;
+    font-weight: 600;
+
+    @include gradient-text();
+}
+
+.date {
+    font-size: 16px;
+    letter-spacing: 0.025em;
+    color: rgba(204, 204, 204, 0.5);
+}

@@ -23,6 +23,10 @@
         left: 50%;
         transform: translate(-50%, -50%);
         font-size: 4rem;
+
+        &--footer {
+            top: 150%;
+        }
         
         @include gradient-text();
     }
