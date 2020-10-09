@@ -4,6 +4,27 @@
     }
 
     &__list-item {
-        margin-left: 10px;
+        margin-left: 20px;
+
+        &:hover {
+            .navigation__link-text {
+                top: 50%;
+            }
+        }
+    }
+
+    &__link-text {
+        font-family: 'Racing Sans One', cursive;
+        background: $gradient;
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+        letter-spacing: 0.035rem;
+        padding: 0 1rem;
+        transition: .3s;
+        position: absolute;
+        top: -50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 4rem;
     }
 }
