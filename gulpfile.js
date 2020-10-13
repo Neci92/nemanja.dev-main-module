@@ -21,7 +21,7 @@ function styles() {
         .pipe(postcss([autoprefixer]))
         .pipe(cleanCss({ compatibility: 'ie11' }))
         .pipe(sourcemaps.write())
-        .pipe(dest('./theme/assets/css'))
+        .pipe(dest('./nemanja.dev/assets/css'))
         .pipe(browserSync.stream());
 }
 
@@ -33,23 +33,23 @@ function scripts() {
         }))
         .pipe(uglify())
         .pipe(rename( 'app.min.js' ))
-        .pipe(dest('./theme/assets/js'))
+        .pipe(dest('./nemanja.dev/assets/js'))
         .pipe(browserSync.stream());
 }
 
 function optImages() {
     return src('src/images/**/*.{jpg,jpeg,png,svg,gif}')
         .pipe(imagemin())
-        .pipe(dest('theme/assets/images'));
+        .pipe(dest('nemanja.dev/assets/images'));
 }
 
 function copyImages() {
     return src('src/images/**/*.{jpg,jpeg,png,svg,gif}')
-        .pipe(dest('theme/assets/images'));
+        .pipe(dest('nemanja.dev/assets/images'));
 }
 
 function cleanImages() {
-    return src('theme/assets/images', {
+    return src('nemanja.dev/assets/images', {
         read: false,
         allowEmpty: true
     }).pipe(clean());
