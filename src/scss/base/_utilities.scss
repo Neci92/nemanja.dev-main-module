@@ -1,14 +1,14 @@
 .container {
-  max-width: 1440px;
+  max-width: 120rem + 2*$container-padding;
   margin: 0 auto;
   padding: 0 $container-padding;
 
   @include breakpoint(sm) {
-    padding: 0 20px;
+    padding: 0 $container-padding-mob;
   }
 
   &--narrow {
-    max-width: 1000px;
+    max-width: 100rem;
   }
 }
 

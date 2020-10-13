@@ -1,6 +1,10 @@
 .footer {
     margin-top: $spacing;
 
+    @include breakpoint(md) {
+        margin-top: $spacing-mob;
+    }
+
     &__wrapper {
         position: relative;
         overflow: hidden;
@@ -11,5 +15,10 @@
         @include border();
         border-bottom-left-radius: 0;
         border-bottom-right-radius: 0;
+
+        @include breakpoint(md) {
+            padding: 2rem $spacing-mob;
+
+        }   
     }
 }
