@@ -7,7 +7,6 @@
     
     @include breakpoint(md) {
         padding: $spacing-mob;
-        padding-right: $spacing-mob * 3;
     }
 
     &:not(:last-child) {
