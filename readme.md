@@ -1,4 +1,5 @@
-# Starter pack for WordPress theme development based on Gulp.js
+# Starting with the project
+Clone repo with `git clone --recursive git@github.com:Neci92/nemanja.dev-main-module.git`
 Install node modules with `npm install` or `yarn`
 
 ## Live reload
