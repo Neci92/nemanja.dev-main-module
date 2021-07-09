@@ -1,0 +1,23 @@
+.blog-post {
+    min-height: calc(100vh - 9.3rem - 5rem - 9.3rem - 5rem); // 9.3rem - header & footer. 5rem - footer margin
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+
+    &__wrapper {
+        padding: $spacing;
+
+        @include border();
+
+        @include breakpoint(md) {
+            padding: $spacing-mob;
+        }
+    }
+
+    &__title {
+        margin-bottom: $spacing;
+
+        @include breakpoint(md) {
+            margin-bottom: $spacing-mob;
+        }
+    }
+}

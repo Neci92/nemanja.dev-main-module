@@ -14,11 +14,19 @@
     &__logo {
         &:hover {
             .header {
-                &__logo-text {
+                &__logo-text-wrapper {
                     top: 50%;
                 }
             }
         }
+    }
+
+    &__logo-text-wrapper {
+        transition: .3s;
+        position: absolute;
+        top: -50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
     }
 
     &__logo-text {
@@ -31,7 +39,9 @@
         left: 50%;
         transform: translate(-50%, -50%);
         font-size: 4rem;
+        display: block;
+        color: $color-primary;
 
-        @include gradient-text();
+        // @include gradient-text(); // Na Firefoxu na iOSu baguje kad ima transform translate
     }
 }

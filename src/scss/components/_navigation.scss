@@ -28,6 +28,7 @@
             top: 150%;
         }
         
-        @include gradient-text();
+        color: $color-primary;
+        // @include gradient-text(); // Na Firefoxu na iOSu baguje kad ima transform translate
     }
 }
