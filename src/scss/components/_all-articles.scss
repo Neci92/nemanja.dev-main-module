@@ -1,0 +1,36 @@
+.all-articles {
+  margin-top: 5rem;
+
+  &__wrapper {
+    padding: $spacing;
+
+    @include border();
+
+    @include breakpoint(md) {
+      padding: $spacing-mob;
+    }
+  }
+
+  &__pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+    color: white;
+
+    & > * + * {
+      margin-left: 1rem;
+    }
+
+    & > a {
+      color: inherit;
+
+      &:hover {
+        color: $color-primary;
+      }
+    }
+
+    & > span {
+      opacity: 0.7;
+    }
+  }
+}

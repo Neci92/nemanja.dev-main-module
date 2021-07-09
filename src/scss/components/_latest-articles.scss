@@ -1,25 +1,37 @@
 .latest-articles {
-    margin-top: $spacing;
+  margin-top: $spacing;
+
+  @include breakpoint(md) {
+    margin-top: $spacing-mob;
+  }
+
+  &__wrapper {
+    padding: $spacing;
+
+    @include border();
 
     @include breakpoint(md) {
-        margin-top: $spacing-mob;
+      padding: $spacing-mob;
     }
+  }
 
-    &__wrapper {
-        padding: $spacing;
+  &__title {
+    margin-bottom: $spacing;
 
-        @include border();
-
-        @include breakpoint(md) {
-            padding: $spacing-mob;
-        }
+    @include breakpoint(md) {
+      margin-bottom: $spacing-mob;
     }
+  }
 
-    &__title {
-        margin-bottom: $spacing;
+  &__link {
+    color: white;
+    text-decoration: underline;
+    display: block;
+    margin-top: 3rem;
+    transition: 0.2s;
 
-        @include breakpoint(md) {
-            margin-bottom: $spacing-mob;
-        }
+    &:hover {
+      color: $color-primary;
     }
+  }
 }
