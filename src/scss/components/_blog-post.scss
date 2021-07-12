@@ -1,7 +1,7 @@
 .blog-post {
   min-height: calc(
     100vh - 9.3rem - 5rem - 9.3rem - 3rem
-  ); // 9.3rem - header & footer. 5rem - footer margin
+  ); // 9.3rem - header & footer. 3rem - footer margin
   margin-top: 5rem;
   margin-bottom: 5rem;
 
@@ -21,5 +21,14 @@
     @include breakpoint(md) {
       margin-bottom: $spacing-mob;
     }
+  }
+}
+
+// When logged in to WP admin area
+.customize-support {
+  .blog-post {
+    min-height: calc(
+      100vh - 9.3rem - 5rem - 9.3rem - 3rem - 2rem
+    ); // 9.3rem - header & footer. 3rem - footer margin + 2rem WP Admin bar
   }
 }
