@@ -12,23 +12,6 @@ export default class HighwayModule {
         default: DefaultTransition
       }
     });
-
-
-    // Listen the `NAVIGATE_IN` event
-    // This event is sent everytime a `data-router-view` is added to the DOM Tree
-    H.on('NAVIGATE_IN', ({ to, location }) => {
-      console.log('IM NAVIGATING');
-      const link = document.querySelector('.header__logo');
-
-      // Clean class
-      link.classList.remove('is-active');
-
-      // Active link
-      if (link.href === location.href) {
-        link.classList.add('is-active');
-      }
-
-    });
   }
 }
 
