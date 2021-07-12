@@ -1,4 +1,5 @@
 .header {
+  &__container {
     position: relative;
     display: flex;
     justify-content: space-between;
@@ -8,40 +9,41 @@
     border-radius: 0px 0px $radius $radius;
 
     @include breakpoint(md) {
-        padding: $spacing-mob;
+      padding: $spacing-mob;
     }
-    
-    &__logo {
-        &:hover {
-            .header {
-                &__logo-text-wrapper {
-                    top: 50%;
-                }
-            }
+  }
+
+  &__logo {
+    &:hover {
+      .header {
+        &__logo-text-wrapper {
+          top: 50%;
         }
+      }
     }
+  }
 
-    &__logo-text-wrapper {
-        transition: .3s;
-        position: absolute;
-        top: -50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-    }
+  &__logo-text-wrapper {
+    transition: 0.3s;
+    position: absolute;
+    top: -50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
 
-    &__logo-text {
-        font-family: 'Racing Sans One', cursive;
-        letter-spacing: 0.035rem;
-        padding: 0 1rem;
-        transition: .3s;
-        position: absolute;
-        top: -50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        font-size: 4rem;
-        display: block;
-        color: $color-primary;
+  &__logo-text {
+    font-family: "Racing Sans One", cursive;
+    letter-spacing: 0.035rem;
+    padding: 0 1rem;
+    transition: 0.3s;
+    position: absolute;
+    top: -50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 4rem;
+    display: block;
+    color: $color-primary;
 
-        // @include gradient-text(); // Na Firefoxu na iOSu baguje kad ima transform translate
-    }
+    // @include gradient-text(); // Na Firefoxu na iOSu baguje kad ima transform translate
+  }
 }

@@ -1,19 +1,9 @@
-import Header from './modules/header';
-import Navigation from './modules/navigation';
-import Footer from './modules/footer';
+import HighwayModule from './modules/highway-module';
 
 // name of a module must be present in the DOM in order for it to be initialized
 export const modules = [
   {
-    name: 'HEADER',
-    constructor: Header
-  },
-  {
-    name: 'NAVIGATION',
-    constructor: Navigation
-  },
-  {
-    name: 'FOOTER',
-    constructor: Footer
+    name: 'HIGHWAY',
+    constructor: HighwayModule
   }
 ];
