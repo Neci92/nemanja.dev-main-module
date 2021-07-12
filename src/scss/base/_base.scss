@@ -1,27 +1,31 @@
 html {
-    font-size: 10px;
+  font-size: 10px;
 }
 
 body {
-    background-color: $bg-main;
-    color: $font-main;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1.8rem;
-    line-height: 1.4;
+  background-color: $bg-main;
+  color: $font-main;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.8rem;
+  line-height: 1.4;
 }
 
 img {
-    width: 100%;
+  width: 100%;
 }
 
 ::-moz-selection,
 ::selection {
-    color: white;
-    background: #E85D54;
-    -webkit-text-fill-color: initial;
-    -webkit-background-clip: initial;
+  color: white;
+  background: #e85d54;
+  -webkit-text-fill-color: initial;
+  -webkit-background-clip: initial;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
+}
+
+a:focus {
+  outline: 1px dotted #e85d54;
 }

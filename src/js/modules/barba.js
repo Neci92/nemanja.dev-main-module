@@ -9,6 +9,10 @@ export default class BarbaModule {
         barba.init({
             // ...
         });
+
+        barba.hooks.enter(() => {
+            window.scrollTo(0, 0);
+        });
     }
 }
 
