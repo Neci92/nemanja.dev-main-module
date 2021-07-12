@@ -1,9 +1,9 @@
-import HighwayModule from './modules/highway-module';
+import BarbaModule from './modules/barba';
 
 // name of a module must be present in the DOM in order for it to be initialized
 export const modules = [
   {
-    name: 'HIGHWAY',
-    constructor: HighwayModule
+    name: 'BARBA',
+    constructor: BarbaModule
   }
 ];
