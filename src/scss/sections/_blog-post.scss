@@ -4,24 +4,6 @@
   ); // 9.3rem - header & footer. 3rem - footer margin
   margin-top: 5rem;
   margin-bottom: 5rem;
-
-  &__wrapper {
-    padding: $spacing;
-
-    @include border();
-
-    @include breakpoint(md) {
-      padding: $spacing-mob;
-    }
-  }
-
-  &__title {
-    margin-bottom: $spacing;
-
-    @include breakpoint(md) {
-      margin-bottom: $spacing-mob;
-    }
-  }
 }
 
 // When logged in to WP admin area

@@ -1,0 +1,9 @@
+.box-wrapper {
+  padding: $spacing;
+
+  @include border();
+
+  @include breakpoint(md) {
+    padding: $spacing-mob;
+  }
+}

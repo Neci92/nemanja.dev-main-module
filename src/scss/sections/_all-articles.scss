@@ -1,16 +1,6 @@
 .all-articles {
   margin-top: 5rem;
 
-  &__wrapper {
-    padding: $spacing;
-
-    @include border();
-
-    @include breakpoint(md) {
-      padding: $spacing-mob;
-    }
-  }
-
   &__pagination {
     display: flex;
     justify-content: center;

@@ -1,5 +1,5 @@
 .container {
-  max-width: 120rem + 2*$container-padding;
+  max-width: 120rem + 2 * $container-padding;
   margin: 0 auto;
   padding: 0 $container-padding;
 
@@ -14,4 +14,12 @@
 
 .noscroll {
   overflow: hidden;
+}
+
+.mb {
+  margin-bottom: $spacing;
+
+  @include breakpoint(md) {
+    margin-bottom: $spacing-mob;
+  }
 }

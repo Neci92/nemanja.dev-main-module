@@ -5,24 +5,6 @@
     margin-top: $spacing-mob;
   }
 
-  &__wrapper {
-    padding: $spacing;
-
-    @include border();
-
-    @include breakpoint(md) {
-      padding: $spacing-mob;
-    }
-  }
-
-  &__title {
-    margin-bottom: $spacing;
-
-    @include breakpoint(md) {
-      margin-bottom: $spacing-mob;
-    }
-  }
-
   &__link {
     color: white;
     text-decoration: underline;

@@ -9,12 +9,14 @@
 @import "base/typography";
 @import "base/utilities";
 
-@import "components/navigation";
-@import "components/header";
-@import "components/footer";
 @import "components/button";
-@import "components/intro";
-@import "components/latest-articles";
-@import "components/all-articles";
-@import "components/article-card";
-@import "components/blog-post";
+@import "components/navigation";
+@import "components/box-wrapper";
+
+@import "sections/header";
+@import "sections/footer";
+@import "sections/intro";
+@import "sections/latest-articles";
+@import "sections/all-articles";
+@import "sections/article-card";
+@import "sections/blog-post";
