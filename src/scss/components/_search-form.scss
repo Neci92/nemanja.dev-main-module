@@ -1,0 +1,48 @@
+.search-form {
+  position: fixed;
+  top: -100%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 80rem;
+  display: flex;
+  align-items: center;
+  transition: 0.4s;
+  background-color: $bg-main;
+  z-index: 101;
+
+  // Potencijalan refactor
+  padding: 2rem $spacing;
+
+  box-shadow: $shadow;
+  border-radius: 0px 0px $radius $radius;
+
+  @include breakpoint(md) {
+    padding: $spacing-mob;
+  }
+
+  &--active {
+    top: 0;
+  }
+
+  &__input {
+    display: block;
+    width: 100%;
+    border: none;
+    background-color: transparent;
+    color: white;
+    border-bottom: 1px solid $color-primary;
+  }
+
+  &__button {
+    box-shadow: $shadow;
+    border-radius: 50%;
+    border: none;
+    background-color: transparent;
+    margin-left: 1.5rem;
+  }
+
+  &__button-icon {
+    width: 4.3rem;
+  }
+}
