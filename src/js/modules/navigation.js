@@ -14,10 +14,10 @@ export default class Navigation {
 
         switch (true) {
             case ('action' in target.dataset && target.getAttribute('data-action') === 'TOGGLE_SEARCH'):
-                this.searchForm.classList.toggle('search-form--active');
-                if (this.searchForm.classList.contains('search-form--active')) {
-                    this.searchForm.querySelector('input').focus();
-                }
+                this.root.emitEvent({
+                    name: 'TOGGLE_SEARCH',
+                    payload: {}
+                });
                 break;
             default:
                 break;

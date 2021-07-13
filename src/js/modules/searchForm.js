@@ -4,7 +4,16 @@ export default class SearchForm {
         this.element = element;
 
         this.handleClick = this.handleClick.bind(this);
+        this.toggleSearch = this.toggleSearch.bind(this);
         this.element.addEventListener('click', this.handleClick);
+        document.addEventListener('TOGGLE_SEARCH', this.toggleSearch)
+    }
+
+    toggleSearch() {
+        this.element.classList.toggle('search-form--active');
+        if (this.element.classList.contains('search-form--active')) {
+            this.element.querySelector('input').focus();
+        }
     }
 
     handleClick(e) {
