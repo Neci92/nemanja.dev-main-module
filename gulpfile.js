@@ -13,6 +13,9 @@ const sourcemaps = require('gulp-sourcemaps');
 const autoprefixer = require('autoprefixer');
 const imagemin = require('gulp-imagemin');
 const clean = require('gulp-clean');
+const ts = require("gulp-typescript");
+const tsProject = ts.createProject("tsconfig.json");
+
 
 function styles() {
     return src('src/scss/style.scss')
@@ -25,6 +28,15 @@ function styles() {
         .pipe(browserSync.stream());
 }
 
+function typescript() {
+    return tsProject.src()
+        .pipe(tsProject()).js
+        .pipe(uglify())
+        .pipe(rename('app.min.js'))
+        .pipe(dest('./nemanja.dev/assets/js'))
+        .pipe(browserSync.stream());;
+}
+
 function scripts() {
     return src(['src/js/app.js'])
         .pipe(webpack(require('./webpack.config')))
@@ -32,7 +44,7 @@ function scripts() {
             presets: ['@babel/env']
         }))
         .pipe(uglify())
-        .pipe(rename( 'app.min.js' ))
+        .pipe(rename('app.min.js'))
         .pipe(dest('./nemanja.dev/assets/js'))
         .pipe(browserSync.stream());
 }
@@ -61,12 +73,13 @@ function watchForChanges() {
     });
     watch('src/scss/**/*.scss', styles);
     watch('src/js/**/*.js', scripts);
+    watch('src/js/**/*.ts', typescript);
     watch("**/*.php").on('change', browserSync.reload);
-    watch('src/images/**/*.{jpg,jpeg,png,svg,gif}').on('change', function(){
+    watch('src/images/**/*.{jpg,jpeg,png,svg,gif}').on('change', function () {
         copyImages();
         browserSync.reload();
     });
 }
 
-exports.watch = series(cleanImages, parallel(scripts, styles, copyImages), watchForChanges);
-exports.default = series(cleanImages, parallel(scripts, styles, optImages));
+exports.watch = series(cleanImages, parallel(scripts, typescript, styles, copyImages), watchForChanges);
+exports.default = series(cleanImages, parallel(scripts, typescript, styles, optImages));

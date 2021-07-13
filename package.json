@@ -10,7 +10,9 @@
   "author": "Nemanja Blagojevic",
   "license": "ISC",
   "dependencies": {
-    "@barba/core": "^2.9.7"
+    "@barba/core": "^2.9.7",
+    "gulp-typescript": "^6.0.0-alpha.1",
+    "typescript": "^4.3.5"
   },
   "devDependencies": {
     "@babel/core": "^7.8.7",
