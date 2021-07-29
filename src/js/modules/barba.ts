@@ -2,7 +2,10 @@
 import barba from '@barba/core';
 
 export default class BarbaModule {
-    constructor(app, element) {
+    root;
+    element;
+
+    constructor(app: any, element: any) {
         this.root = app;
         this.element = element;
 

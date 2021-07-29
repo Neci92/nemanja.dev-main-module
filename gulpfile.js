@@ -34,7 +34,7 @@ function typescript() {
         .pipe(uglify())
         .pipe(rename('app.min.js'))
         .pipe(dest('./nemanja.dev/assets/js'))
-        .pipe(browserSync.stream());;
+        .pipe(browserSync.stream());
 }
 
 function scripts() {
@@ -81,5 +81,5 @@ function watchForChanges() {
     });
 }
 
-exports.watch = series(cleanImages, parallel(scripts, typescript, styles, copyImages), watchForChanges);
-exports.default = series(cleanImages, parallel(scripts, typescript, styles, optImages));
+exports.watch = series(cleanImages, parallel(typescript, styles, copyImages), watchForChanges);
+exports.default = series(cleanImages, parallel(typescript, styles, optImages));

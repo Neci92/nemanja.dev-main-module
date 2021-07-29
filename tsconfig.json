@@ -1,7 +1,9 @@
 {
     "files": ["src/js/app.ts"],
     "compilerOptions": {
-      "noImplicitAny": true,
-      "target": "es5"
+      // "noImplicitAny": true,
+      "target": "es5",
+      "lib": ["DOM"],
+      "esModuleInterop": true
     }
 } 
