@@ -9,6 +9,13 @@
     max-width: 76rem;
     margin: 0 auto;
     line-height: 1.5;
+    font-size: 1.6rem;
+
+    h2 + p,
+    h3 + p,
+    h4 + p {
+      margin-top: 1.6rem;
+    }
 
     a {
       color: $color-primary;
