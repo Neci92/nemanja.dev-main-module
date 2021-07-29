@@ -18,12 +18,18 @@
 
         @include breakpoint(md) {
             padding: 2rem $spacing-mob;
-
+            justify-content: center;
         }   
     }
 
     &__message {
         flex: 0 0 100%;
         text-align: center;
+    }
+
+    @include breakpoint(md) {
+        .navigation {
+            display: none;
+        }   
     }
 }

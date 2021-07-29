@@ -1,11 +1,13 @@
 .navigation { 
     &__list {
         display: flex;
+
+        & > * + * {
+            margin-left: 2rem;
+        }
     }
 
     &__list-item {
-        margin-left: 20px;
-
         &:hover {
             .navigation__link-text {
                 top: 50%;
@@ -23,12 +25,15 @@
         left: 50%;
         transform: translate(-50%, -50%);
         font-size: 4rem;
+        color: $color-primary;
+        // @include gradient-text(); // Na Firefoxu na iOSu baguje kad ima transform translate
 
         &--footer {
             top: 150%;
         }
         
-        color: $color-primary;
-        // @include gradient-text(); // Na Firefoxu na iOSu baguje kad ima transform translate
+        @include breakpoint(md) {
+            display: none;
+        }
     }
 }

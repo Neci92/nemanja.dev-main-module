@@ -2,6 +2,10 @@
   padding-right: $spacing * 3;
   position: relative;
 
+  @include breakpoint(sm) {
+    padding-right: $spacing;
+  }
+
   &:not(:last-child) {
     margin-bottom: $spacing;
 
