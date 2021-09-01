@@ -1,8 +1,5 @@
 export default class SearchForm {
-    root;
-    element;
-
-    constructor(app: any, element: any) {
+    constructor(app, element) {
         this.root = app;
         this.element = element;
 
@@ -19,7 +16,7 @@ export default class SearchForm {
         }
     }
 
-    handleClick(e: any) {
+    handleClick(e) {
         const target = e.target;
 
         switch (true) {

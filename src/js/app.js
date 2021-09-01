@@ -2,23 +2,22 @@ import { generateGuid } from './utils';
 import { modules } from './modules';
 
 class App {
-  module: {};
-  constructor(modules: any) {
+  constructor(modules) {
     this.initModules(modules);
   }
 
-  initModules(modules: any) {
-    let moduleElements: any = document.querySelectorAll('[data-module]') || [];
+  initModules(modules) {
+    let moduleElements = document.querySelectorAll('[data-module]') || [];
 
     if (!moduleElements.length) {
       console.warn('MISSING MODULES: No modules were defined on the page, please check your HTML');
       return this;
     }
 
-    moduleElements.forEach((element: any) => {
+    moduleElements.forEach((element) => {
       const elementModule = element.getAttribute('data-module');
 
-      modules.forEach((module: any) => {
+      modules.forEach((module) => {
         if (module.name === elementModule) {
           this.module[`${module.name}-${generateGuid()}`]= new module.constructor(this, element);
         }
@@ -26,7 +25,7 @@ class App {
     });
   }
 
-  emitEvent({ name, payload }: { name: any, payload: any }) {
+  emitEvent({ name, payload }) {
     const event = new CustomEvent(name, {
       detail: payload,
       bubbles: true,
@@ -41,8 +40,4 @@ const app = new App(modules);
 export default app;
 
 // for debugging
-declare global {
-  interface Window { APP: any; }
-}
-
 window.APP = app || {};

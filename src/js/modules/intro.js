@@ -1,9 +1,6 @@
 
 export default class Intro {
-    root;
-    element;
-
-    constructor(app: any, element: any) {
+    constructor(app, element) {
         this.root = app;
         this.element = element;
 

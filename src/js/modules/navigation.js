@@ -1,9 +1,5 @@
 export default class Navigation {
-    root;
-    element;
-    searchForm: any;
-
-    constructor(app: any, element: any) {
+    constructor(app, element) {
         this.root = app;
         this.element = element;
 
@@ -13,7 +9,7 @@ export default class Navigation {
         this.searchForm = document.querySelector('.search-form');
     }
 
-    handleClick(e: any) {
+    handleClick(e) {
         const target = e.target;
 
         switch (true) {
