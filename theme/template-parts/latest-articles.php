@@ -4,7 +4,7 @@
             <h2 class="h2 mb latest-articles__title">Latest Articles</h2>
 
             <ul>
-            <?php $lastposts = get_posts( array(
+                <?php $lastposts = get_posts( array(
                         'posts_per_page' => 3
                     ) );
 
@@ -16,7 +16,9 @@
                                     <h3 class="h3"><?php the_title(); ?></h3>
                                 </a>
                                 <date class="date article-card__date"><?php echo get_the_date(); ?></date>
-                                <p><?php the_excerpt(); ?></p>
+                                <div class="article-card__excerpt">
+                                    <?php the_excerpt(); ?>
+                                </div>
                                 <a class="button button--primary article-card__button" title="Read more" href="<?php the_permalink(); ?>">Read more</a>
                                 <?php if ( has_post_thumbnail() ) : ?>
                                     <div class="article-card__image">

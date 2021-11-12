@@ -1,6 +1,8 @@
 .article-card {
   padding-right: $spacing * 3;
   position: relative;
+  display: flex;
+  flex-direction: column;
 
   @include breakpoint(sm) {
     padding-right: $spacing;
@@ -13,6 +15,19 @@
       margin-bottom: $spacing-mob;
     }
   }
+
+  &--row {
+    padding: 2rem;
+
+    &:not(:last-child) {
+      margin-bottom: 0;
+  
+      @include breakpoint(md) {
+        margin-bottom: 0;
+      }
+    }
+  }
+
 
   &__image {
     position: absolute;
@@ -39,8 +54,13 @@
     }
   }
 
+  &__excerpt {
+    margin-bottom: 3rem;
+  }
+
   &__button {
-    margin-top: 3rem;
+    margin-top: auto;
+    align-self: flex-start;
   }
 
   &__date {

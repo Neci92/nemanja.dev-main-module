@@ -30,6 +30,21 @@
       }
     }
   }
+
+  &__latest {
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    display: flex;
+
+    & > * {
+      flex: 0 0 calc(33.3% - 2rem);
+      margin-bottom: 0;
+    }
+
+    & > * + * {
+      margin-left: 3rem;
+    }
+  }
 }
 
 
