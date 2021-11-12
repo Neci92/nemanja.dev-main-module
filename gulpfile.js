@@ -24,7 +24,7 @@ function styles() {
         .pipe(postcss([autoprefixer]))
         .pipe(cleanCss({ compatibility: 'ie11' }))
         .pipe(sourcemaps.write())
-        .pipe(dest('./nemanja.dev/assets/css'))
+        .pipe(dest('./theme/assets/css'))
         .pipe(browserSync.stream());
 }
 
@@ -33,7 +33,7 @@ function styles() {
 //         .pipe(tsProject()).js
 //         .pipe(uglify())
 //         .pipe(rename('app.min.js'))
-//         .pipe(dest('./nemanja.dev/assets/js'))
+//         .pipe(dest('./theme/assets/js'))
 //         .pipe(browserSync.stream());
 // }
 
@@ -45,23 +45,23 @@ function scripts() {
         }))
         .pipe(uglify())
         .pipe(rename('app.min.js'))
-        .pipe(dest('./nemanja.dev/assets/js'))
+        .pipe(dest('./theme/assets/js'))
         .pipe(browserSync.stream());
 }
 
 function optImages() {
     return src('src/images/**/*.{jpg,jpeg,png,svg,gif}')
         .pipe(imagemin())
-        .pipe(dest('nemanja.dev/assets/images'));
+        .pipe(dest('theme/assets/images'));
 }
 
 function copyImages() {
     return src('src/images/**/*.{jpg,jpeg,png,svg,gif}')
-        .pipe(dest('nemanja.dev/assets/images'));
+        .pipe(dest('theme/assets/images'));
 }
 
 function cleanImages() {
-    return src('nemanja.dev/assets/images', {
+    return src('theme/assets/images', {
         read: false,
         allowEmpty: true
     }).pipe(clean());
