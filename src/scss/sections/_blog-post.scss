@@ -1,20 +1,25 @@
 .blog-post {
-  min-height: calc(
-    100vh - 9.3rem - 5rem - 9.3rem - 3rem
-  ); // 9.3rem - header & footer. 3rem - footer margin
   margin-top: 5rem;
   margin-bottom: 5rem;
 
   &__content {
     max-width: 76rem;
     margin: 0 auto;
-    line-height: 1.5;
-    font-size: 1.6rem;
+
+    h2, h3, h4 {
+      margin-top: 7rem;
+    }
+
+    h2 + *,
+    h3 + *,
+    h4 + * {
+      margin-top: 1rem;
+    }
 
     h2 + p,
     h3 + p,
     h4 + p {
-      margin-top: 1.6rem;
+      margin-top: 3rem;
     }
 
     a {
@@ -27,11 +32,4 @@
   }
 }
 
-// When logged in to WP admin area
-.customize-support {
-  .blog-post {
-    min-height: calc(
-      100vh - 9.3rem - 5rem - 9.3rem - 3rem - 2rem
-    ); // 9.3rem - header & footer. 3rem - footer margin + 2rem WP Admin bar
-  }
-}
+

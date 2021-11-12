@@ -6,12 +6,28 @@ html {
   font-size: 10px;
 }
 
+// When logged in to WP admin area
+.customize-support {
+  main {
+    min-height: calc(
+      100vh - 9.3rem - 5rem - 9.3rem - 3rem - 2rem
+    ); // 9.3rem - header & footer. 3rem - footer margin + 2rem WP Admin bar
+  }
+}
+
+main {
+  min-height: calc(
+    100vh - 9.3rem - 5rem - 9.3rem - 5rem
+  ); // 9.3rem - header & footer. 3rem - footer margin
+}
+
 body {
   background-color: $bg-main;
   color: $font-main;
   font-family: "Montserrat", sans-serif;
   font-size: 1.8rem;
-  line-height: 1.4;
+  line-height: 1.7;
+  letter-spacing: 0.02em;
 }
 
 img {

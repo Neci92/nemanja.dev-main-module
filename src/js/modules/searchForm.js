@@ -13,6 +13,7 @@ export default class SearchForm {
         this.element.classList.toggle('search-form--active');
         if (this.element.classList.contains('search-form--active')) {
             this.element.querySelector('input').focus();
+            this.element.querySelector('input').select();
         }
     }
 

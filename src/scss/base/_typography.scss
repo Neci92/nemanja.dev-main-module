@@ -2,7 +2,7 @@
     font-weight: 600;
     font-size: 4rem;
     color: linear-gradient(90.86deg, #E85D54 0%, #DA3F5B 99.85%);
-    line-height: 1.2;
+    line-height: 1.4;
 
     @include gradient-text();
 
@@ -14,7 +14,7 @@
 .h2, h2 {
     font-size: 36px;
     font-weight: 600;
-    line-height: 1.2;
+    line-height: 1.4;
 
     @include gradient-text();
 
@@ -26,6 +26,7 @@
 .h3, h3 {
     font-size: 3rem;
     font-weight: 600;
+    line-height: 1.4;
 
     @include gradient-text();
 
@@ -36,6 +37,7 @@
 
 .date {
     font-size: 1.6rem;
+    line-height: 1.4;
     letter-spacing: 0.025em;
     color: rgba(204, 204, 204, 0.5);
 
