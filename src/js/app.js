@@ -3,6 +3,8 @@ import { modules } from './modules';
 
 class App {
   constructor(modules) {
+    this.module = {};
+
     this.initModules(modules);
   }
 
@@ -14,12 +16,12 @@ class App {
       return this;
     }
 
-    moduleElements.forEach((element) => {
+    moduleElements.forEach(element => {
       const elementModule = element.getAttribute('data-module');
 
-      modules.forEach((module) => {
+      modules.forEach(module => {
         if (module.name === elementModule) {
-          this.module[`${module.name}-${generateGuid()}`]= new module.constructor(this, element);
+          this.module[`${module.name}-${generateGuid()}`] = new module.constructor(this, element);
         }
       });
     });
